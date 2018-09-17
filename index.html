@@ -5,8 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BMI Calculator</title>
+    <style>
+        *{padding: 0; margin: 0;}
+        body{
+            font-family: 'Montserrat',sans-serif;
+            background: linear-gradient(to right, #0095AD, #665522);
+            width: 100%;
+            height: 100%;
+        }
+        .container{
+            padding: 15px;
+            background: rgb(228, 223, 223);
+            width: 50%;
+            margin: 0 auto;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .container .title{
+            color: rgb(133, 61, 228);
+        }
+        .container .calc-component input{
+            width: 50%;
+            height: 30px;
+            padding: 7px;
+            margin: 25px 0 0 0;
+            border: none;
+            font-size: 1rem;
+            border-radius: 15px;
+        }
+        .calc-component input:focus{
+            outline: none;
+        }
+        .calc-submit input{
+            padding: 8px;
+            margin-top: 30px;
+            font-size: 15px;
+            border: none;
+            background: rgb(133, 61, 228);
+            color: #fff;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .calc-component span{
+            position: relative;
+            left: -8%;
+            color: blueviolet
+        }
+        .output{
+            margin: 35px 0; 
+        }
+        .bmi-output{
+            background: red;
+            color: #fff;
+            padding: 6px;
+            border-radius: 6px;
+            width: 60%; 
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="title">
+            <h2>BMI Calculator</h2>
+        </div>
+        <div class="calc">
+            <form action="#">
+                <div class="calc-component">
+                    <input type="text"  id="calc-height" placeholder="Enter Weight in cms....">
+                    <span>cms</span>
+                </div>
+                <div class="calc-component">
+                        <input type="text"  id="calc-weight" placeholder="Enter Weight in kgs....">
+                        <span>kgs</span>
+                </div>
+                <div class="calc-submit">
+                    <input type="submit" value="Check BMI">
+                </div>
+            </form>
+        </div>
+        <div class="output">
+            <div class="bmi-output">
+                <p> Your BMI is 26, Your Obese maintain your Health</p>
+            </div>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
