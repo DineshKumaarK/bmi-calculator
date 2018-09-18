@@ -16,9 +16,10 @@
         .container{
             padding: 15px;
             background: rgb(228, 223, 223);
+            border-radius: 5px;
             width: 50%;
             margin: 0 auto;
-            margin-top: 50px;
+            margin-top: 7%;
             text-align: center;
         }
         .container .title{
@@ -71,6 +72,12 @@
         .obese{
             background: red
         }
+        @media screen and (max-width: 820px){
+            .calc-component span{
+                font-size: 13px;
+                left: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -95,7 +102,7 @@
         </div>
         <div class="output">
             <div class="bmi-output">
-                <p> Your BMI is 26, Your Obese maintain your Health</p>
+                <p></p>
             </div>
         </div>
     </div>

@@ -5,13 +5,14 @@ function display(bmi){
     let bmiColor = document.querySelector('.bmi-output');
     if(bmi < 18.5){
         document.querySelector('p').innerText = ` Your BMI is ${bmi} , your Lean ,Put some More Weight`;
-        bmiColor.style.background = " rgb(224, 77, 24)";
+        // bmiColor.classList.remove('bmi-output');
+        bmiColor.classList.add('lean');
     } else if(bmi > 18.5 && bmi < 23){
         document.querySelector('p').innerText = ` Your BMI is ${bmi} , your Normal , Just  Maintain Your Fitness`;
-        bmiColor.style.background = " rgb(20, 173, 20)";
+        bmiColor.classList.add('normal');
     }  else if(bmi > 23){
         document.querySelector('p').innerText = ` Your BMI is ${bmi} , your Obese , Go To Gym and Start Training`;
-        bmiColor.style.background = " red";
+        bmiColor.classList.add('obese');
     }
 
 }
